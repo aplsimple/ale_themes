@@ -10,9 +10,10 @@ The batch contains a bit modified themes made by [rdbende](https://github.com/rd
 
 The modifications are mostly about:
 
+  * focusing widgets (with Tab key)
+  * colors of widgets
   * colors of menu
-  * colors of buttons with focus
-  * colors of treeview
+  * treeview
   * corners of widgets
 
 # Usage

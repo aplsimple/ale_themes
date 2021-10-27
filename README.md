@@ -52,7 +52,7 @@ In [alited](https://aplsimple.github.io/en/tcl/alited) editor, the themes are us
       * [themes at chiselapp](https://chiselapp.com/user/aplsimple/repository/alethemes/download)
       * [themes at github](https://github.com/aplsimple/alethemes)
 
-  * [rdbende](https://gitgub.com/rdbende)
+  * [rdbende](https://github.com/rdbende)
 
   * [alited](https://aplsimple.github.io/en/tcl/alited)
 

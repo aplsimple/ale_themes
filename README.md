@@ -49,8 +49,8 @@ In [alited](https://aplsimple.github.io/en/tcl/alited) editor, the themes are us
 
   * Download links:
 
-      * [themes at chiselapp](https://chiselapp.com/user/aplsimple/repository/alethemes/download)
-      * [themes at github](https://github.com/aplsimple/alethemes)
+      * [themes at chiselapp](https://chiselapp.com/user/aplsimple/repository/ale_themes/download)
+      * [themes at github](https://github.com/aplsimple/ale_themes)
 
   * [rdbende](https://github.com/rdbende)
 

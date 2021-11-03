@@ -13,7 +13,7 @@ The modifications are mostly about:
   * focusing widgets (with Tab key)
   * colors of widgets
   * colors of menu
-  * treeview
+  * treeview's behavior
   * corners of widgets
 
 # Usage
@@ -43,6 +43,8 @@ The themes are used as follows:
     # forest dark:
     source forest/forest-dark.tcl
     ttk::style theme use forest-dark
+
+An example of usage is *test.tcl*. It requires [apave](https://aplsimple.github.io/en/tcl/pave) package.
 
 In [alited](https://aplsimple.github.io/en/tcl/alited) editor, the themes are used along with color schemes (see *ini.tcl* of [alited source](https://github.com/aplsimple/alited)). The color schemes are provided by [apave](https://aplsimple.github.io/en/tcl/pave) package.
 

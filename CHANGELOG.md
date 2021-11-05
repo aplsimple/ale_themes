@@ -1,8 +1,9 @@
 # LAST CHANGES:
 
 
-Version `3 Nov'21`
+Version `5 Nov'21`
 
   - TODO  : CHANGE: rdbende themes - button hover colors not seen
 
-  - BUGFIX: sun-valley-dark theme - treeview's heading absent (in alited)
+  - BUGFIX: sun-valley & azure-dark - disabled scrollbars were visible
+  - BUGFIX: sun-valley-dark - treeview's heading absent (in alited)

@@ -1,9 +1,18 @@
 # LAST CHANGES:
 
 
-Version `5 Nov'21`
+Version `29 Dec'21`
 
-  - TODO  : CHANGE: rdbende themes - button hover colors not seen
+  - CHANGE: foreground colors of disabled
+  - CHANGE: -relief of comboboxes
+
+
+Version `11 Nov'21`
+
+  - CHANGE: check/radio buttons hovered
+
+
+Version `5 Nov'21`
 
   - BUGFIX: sun-valley & azure-dark - disabled scrollbars were visible
   - BUGFIX: sun-valley-dark - treeview's heading absent (in alited)

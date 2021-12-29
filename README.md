@@ -63,10 +63,12 @@ In [alited](https://aplsimple.github.io/en/tcl/alited) editor, the themes are us
 
 # Demos
 
-  * [demo of alited v1.0.5](https://github.com/aplsimple/alited/releases/download/6.Themes_alited-1.0.5/6.Themes_alited-1.0.5.mp4)
+  * [demo of ale_themes](https://github.com/aplsimple/ale_themes/releases/download/ale_themes-1.0/ale_themes.mp4)
 
-  * [demo of apave v3.4.5](https://github.com/aplsimple/pave/releases/download/apave-theming.3.4.5/apave-theming.3.4.5.mp4)
+  * [demo of alited v1.0.6](https://github.com/aplsimple/alited/releases/download/6.Themes_alited-1.0.6/6.Themes_alited-1.0.6.mp4)
 
-Below is a screenshot of localized [alited](https://aplsimple.github.io/en/tcl/alited) v1.0.4, with *forest dark theme*:
+  * [demo of apave v3.4.6](https://github.com/aplsimple/pave/releases/download/apave-theming.3.4.6/apave-theming.3.4.6.mp4)
+
+Below is a screenshot of localized [alited](https://aplsimple.github.io/en/tcl/alited), with *forest dark theme*:
 
 <img src="https://aplsimple.github.io/en/tcl/alited/files/alited-ru.png" class="media" alt="">

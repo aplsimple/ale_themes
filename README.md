@@ -69,6 +69,6 @@ In [alited](https://aplsimple.github.io/en/tcl/alited) editor, the themes are us
 
   * [demo of apave v3.4.6](https://github.com/aplsimple/pave/releases/download/apave-theming.3.4.6/apave-theming.3.4.6.mp4)
 
-Below is a screenshot of localized [alited](https://aplsimple.github.io/en/tcl/alited), with *forest dark theme*:
+Below is a screenshot of localized [alited](https://aplsimple.github.io/en/tcl/alited), with *sun-valley dark theme*:
 
 <img src="https://aplsimple.github.io/en/tcl/alited/files/alited-ru.png" class="media" alt="">

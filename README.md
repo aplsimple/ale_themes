@@ -65,7 +65,7 @@ In [alited](https://aplsimple.github.io/en/tcl/alited) editor, the themes are us
 
   * [demo of ale_themes](https://github.com/aplsimple/ale_themes/releases/download/ale_themes-1.0/ale_themes.mp4)
 
-  * [demo of alited v1.0.6](https://github.com/aplsimple/alited/releases/download/6.Themes_alited-1.0.6/6.Themes_alited-1.0.6.mp4)
+  * [demo of alited v1.1](https://github.com/aplsimple/alited/releases/download/6.Themes_alited-1.1/6.Themes_alited-1.1.mp4)
 
   * [demo of apave v3.4.6](https://github.com/aplsimple/pave/releases/download/apave-theming.3.4.6/apave-theming.3.4.6.mp4)
 

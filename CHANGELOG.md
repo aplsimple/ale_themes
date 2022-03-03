@@ -1,6 +1,11 @@
 # LAST CHANGES:
 
 
+Version `3 Mar'22`
+
+  - CHANGE: background color of sun-valley-dark's readonly combobox
+
+
 Version `29 Dec'21`
 
   - CHANGE: foreground colors of disabled

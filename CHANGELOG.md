@@ -1,6 +1,13 @@
 # LAST CHANGES:
 
 
+Version `10 Aug'22`
+
+  - NEW   : frame.png for labelframe
+  - CHANGE: some pngs (notebook, tab, separator, switch)
+  - CHANGE: border of notebook
+
+
 Version `3 Mar'22`
 
   - CHANGE: background color of sun-valley-dark's readonly combobox

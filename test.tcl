@@ -102,10 +102,12 @@ pave paveWindow $win.fra {
   {radB radA L 1 1 {-st ws -padx 5}  {-t "Glob" -var ::v1 -value 2}}
   {radC radB L 1 5 {-st ws -padx 0 -cw 1}  {-t "RE  " -var ::v1 -value 3}}
   {h_2 labm T 1 9  {-st es -rw 1}}
-  {seh1  h_2 T 1 9  {-st ews}}
-  {Chb1 seh1 T 1 2 {-st w} {-t "Match whole word only" -var ::c1}}
+  {seh0  h_2 T 1 9  {-st ews}}
+  {Chb1 seh0 T 1 2 {-st w} {-t "Match whole word only" -var ::c1}}
   {chb2 chb1 T 1 2 {-st w} {-t "Match case"  -var ::c2}}
   {chb3 chb2 T 1 2 {-st w} {-t "Replace by blank" -var ::c3}}
+  {h_4 chb3 T 1 1}
+  {seh1 h_4 T 1 11 {-st ews}}
   {sev1 chb1 L 4 1}
   {fralab3 sev1 L 4 6 {-st nsw -pady 0} {-borderwidth 0}}
   {.lab3 - - - - {pack -anchor w} {-t "Direction:"}}
@@ -121,6 +123,8 @@ pave paveWindow $win.fra {
   {but4 seh2 T 1 1 {-st wes -pady 4} {-t Replace -tip {$::tip} -com "::pave res $win 4"}}
   {but5 but4 T 1 1 {-st we  -pady 0} {-t "All in Text" -tip {$::tip} -com "::pave res $win 5"}}
   {But6 but5 T 1 1 {-st wen -pady 4} {-t "All in Session" -tip {$::tip} -com "::pave res $win 6"}}
+  {lfr seh1 T 1 9 {-st nswe -pady 4} {-t "Labeled frame"}}
+  {.lab - - - - {-st nswe -pady 4} {-t "\nLabel inside the frame\n"}}
 }
 
 # ________________________ Transpops _________________________ #

@@ -1,6 +1,11 @@
 # LAST CHANGES:
 
 
+Version `16 Nov'22`
+
+  - BUGFIX: azure/theme/dark/notebook.png: corners made the notebook frame dented
+
+
 Version `10 Aug'22`
 
   - NEW   : frame.png for labelframe

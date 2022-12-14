@@ -1,6 +1,11 @@
 # LAST CHANGES:
 
 
+Version `14 Dec'22`
+
+  - NEW   : awthemes-10.4.0 added
+
+
 Version `16 Nov'22`
 
   - BUGFIX: azure/theme/dark/notebook.png: corners made the notebook frame dented

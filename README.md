@@ -2,11 +2,13 @@
 
 It's a batch of Tcl/Tk themes used in [alited](https://aplsimple.github.io/en/tcl/alited) editor.
 
-The batch contains a bit modified themes made by [rdbende](https://github.com/rdbende):
+The batch contains *awthemes-10.4.0* theme by [Brad Lanam](https://wiki.tcl-lang.org/page/bll). The theme was modified as for scrollbars (colors at hovering and hovering not).
 
-  * azure light and dark
-  * forest light and dark
-  * sun-valley light and dark
+Also, the batch contains a bit modified themes made by [rdbende](https://github.com/rdbende):
+
+  * *azure* light and dark
+  * *forest* light and dark
+  * *sun-valley* light and dark
 
 The modifications are mostly about:
 

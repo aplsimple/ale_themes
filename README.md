@@ -20,7 +20,17 @@ The modifications are mostly about:
 
 # Usage
 
-The themes are used as follows:
+The awthemes themes by [Brad Lanam](https://wiki.tcl-lang.org/page/bll) are used as follows:
+
+    package require awthemes
+
+    # for the dark theme:
+    package require ttk::theme::awdark
+
+    # for the light theme:
+    package require ttk::theme::awlight
+
+The themes by [rdbende](https://github.com/rdbende)  are used as follows:
 
     # azure light:
     source azure/azure.tcl
@@ -67,10 +77,10 @@ In [alited](https://aplsimple.github.io/en/tcl/alited) editor, the themes are us
 
   * [demo of ale_themes](https://github.com/aplsimple/ale_themes/releases/download/ale_themes-1.0/ale_themes.mp4)
 
-  * [demo of alited v1.3](https://github.com/aplsimple/alited/releases/download/6.Themes_alited-1.3/6.Themes_alited-1.3-dark.mp4)
+  * [demo of alited v1.3](https://github.com/aplsimple/alited/releases/download/Demos_of_alited-1.3.5/6.Themes_alited-1.3.5.mp4)
 
   * [demo of apave v3.4.6](https://github.com/aplsimple/pave/releases/download/apave-theming.3.4.6/apave-theming.3.4.6.mp4)
 
-Below is a screenshot of localized [alited](https://aplsimple.github.io/en/tcl/alited), with *sun-valley dark theme*:
+Below is a screenshot of [alited](https://aplsimple.github.io/en/tcl/alited) with *sun-valley dark theme*, in MS Windows 10:
 
-<img src="https://aplsimple.github.io/en/tcl/alited/files/alited-ru.png" class="media" alt="">
+<img src="https://aplsimple.github.io/en/tcl/alited/files/alited-win10.png" class="media" alt="">

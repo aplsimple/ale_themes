@@ -18,6 +18,11 @@ The modifications are mostly about:
   * treeview's behavior
   * corners of widgets
 
+At last, the batch contains two themes (light and dark):
+
+  * *radiance* (modified original ttk theme)
+  * *darkbrown*
+
 # Usage
 
 The awthemes themes by [Brad Lanam](https://wiki.tcl-lang.org/page/bll) are used as follows:
@@ -55,6 +60,16 @@ The themes by [rdbende](https://github.com/rdbende)  are used as follows:
     # forest dark:
     source forest/forest-dark.tcl
     ttk::style theme use forest-dark
+
+The *radiance* and *darkbrown* themes are used as follows:
+
+    # radiance:
+    source radiance/radiance.tcl
+    ttk::style theme use radiance
+
+    # darkbrown:
+    source darkbrown/darkbrown.tcl
+    ttk::style theme use darkbrown
 
 An example of usage is *test.tcl*. It requires [apave](https://aplsimple.github.io/en/tcl/pave) package.
 

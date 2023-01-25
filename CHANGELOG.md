@@ -1,6 +1,11 @@
 # LAST CHANGES:
 
 
+Version `25 Jan'23`
+
+  - NEW   : radiance and darkbrown added
+
+
 Version `14 Dec'22`
 
   - NEW   : awthemes-10.4.0 added

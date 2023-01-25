@@ -12,7 +12,7 @@ package require Tk
 # ________________________ Packages _________________________ #
 
 # change apave package's location at need:
-lappend auto_path "../pave"
+lappend auto_path "../apave"
 
 set ::testdirname [file normalize [file dirname [info script]]]
 catch {cd $::testdirname}
@@ -48,14 +48,11 @@ proc Set_Theme {} {
       if {[catch {set_theme dark}]} {ttk::style theme use sun-valley-dark}
     }
 
-    "forest light" {
-      catch {source forest/forest-light.tcl}
-      ttk::style theme use forest-light
-    }
-
-    default {
-      catch {source forest/forest-dark.tcl}
-      ttk::style theme use forest-dark
+    "forest light" - "forest dark" - radiance {
+      set name [string map {{ } -} $::theme]
+      set dir [lindex $::theme 0]
+      catch {source $dir/$name.tcl}
+      ttk::style theme use $name
     }
   }
 }
@@ -77,27 +74,27 @@ set tip "Hit to restart the test and\nset the theme from scratch."
 if {[llength $::argv]} {
   lassign $::argv theme en1 en2 v1 c1 c2 c3 v2 c4 sw
 } else {
-  set theme "azure light"
+  set theme radiance
 }
 Set_Theme
 
 # This test 1 demonstrates how easily the standard dialog "Search & Replace"
 # can be created by means of the pave.
 
-apave::initWM -theme {}
+apave::initWM -theme $theme
 
 apave::APave create pave
 set win .win
 pave makeWindow $win.fra "Find and Replace"
 pave paveWindow $win.fra {
-  {lab0 - - 1 1    {-st e}  {-t "Theme: "}}
-  {Cbx0 lab0 L 1 7 {-st wes} {-tvar ::theme -values {"azure light" "azure dark" "sun-valley light" "sun-valley dark" "forest light" "forest dark"} -state readonly -selcombobox ::Set_Theme}}
-  {swi1 cbx0 L 1 1    {-st e}  {-t "Lock" -var ::sw -com ::Lock -afteridle ::Lock}}
-  {lab1 lab0 T 1 1    {-st e}  {-t "Find: "}}
-  {Cbx1 lab1 L 1 9 {-st wes} {-tvar ::en1 -values {"find 1" "find 2" "find 3"}}}
-  {lab2 lab1 T 1 1 {-st e}  {-t "Replace: " -style TLabelFS}}
-  {cbx2 lab2 L 1 9 {-st wes} {-tvar ::en2 -values {"replace 1" "replace 2" "replace 3"}}}
-  {labm lab2 T 1 1 {-st e}  {-t "Match: "}}
+  {lab0 - - 1 1    {-st ens}  {-t "Theme: " -style TLabelFS}}
+  {Cbx0 lab0 L 1 7 {-st wesn} {-tvar ::theme -values {"azure light" "azure dark" "sun-valley light" "sun-valley dark" "forest light" "forest dark" radiance} -state readonly -selcombobox ::Set_Theme}}
+  {swi1 cbx0 L 1 1    {-st ens}  {-t "Lock" -var ::sw -com ::Lock -afteridle ::Lock}}
+  {lab1 lab0 T 1 1    {-st ens}  {-t "Find: " -style TLabelFS}}
+  {Cbx1 lab1 L 1 9 {-st wesn} {-tvar ::en1 -values {"find 1" "find 2" "find 3"}}}
+  {lab2 lab1 T 1 1 {-st ens}  {-t "Replace: " -style TLabelFS}}
+  {cbx2 lab2 L 1 9 {-st wesn} {-tvar ::en2 -values {"replace 1" "replace 2" "replace 3"}}}
+  {labm lab2 T 1 1 {-st ens}  {-t "Match: "}}
   {radA labm L 1 1 {-st es -padx 0}  {-t "Exact" -var ::v1 -value 1}}
   {radB radA L 1 1 {-st ws -padx 5}  {-t "Glob" -var ::v1 -value 2}}
   {radC radB L 1 5 {-st ws -padx 0 -cw 1}  {-t "RE  " -var ::v1 -value 3}}

@@ -20,7 +20,7 @@ The modifications are mostly about:
 
 At last, the batch contains two themes (light and dark):
 
-  * *radiance* (modified original ttk theme)
+  * *lightbrown*
   * *darkbrown*
 
 # Usage
@@ -61,11 +61,11 @@ The themes by [rdbende](https://github.com/rdbende)  are used as follows:
     source forest/forest-dark.tcl
     ttk::style theme use forest-dark
 
-The *radiance* and *darkbrown* themes are used as follows:
+The *lightbrown* and *darkbrown* themes are used as follows:
 
-    # radiance:
-    source radiance/radiance.tcl
-    ttk::style theme use radiance
+    # lightbrown:
+    source lightbrown/lightbrown.tcl
+    ttk::style theme use lightbrown
 
     # darkbrown:
     source darkbrown/darkbrown.tcl

@@ -48,9 +48,10 @@ proc Set_Theme {} {
       if {[catch {set_theme dark}]} {ttk::style theme use sun-valley-dark}
     }
 
-    "forest light" - "forest dark" - radiance {
+    "forest light" - "forest dark" - lightbrown - darkbrown {
       set name [string map {{ } -} $::theme]
       set dir [lindex $::theme 0]
+source $dir/$name.tcl
       catch {source $dir/$name.tcl}
       ttk::style theme use $name
     }
@@ -74,7 +75,7 @@ set tip "Hit to restart the test and\nset the theme from scratch."
 if {[llength $::argv]} {
   lassign $::argv theme en1 en2 v1 c1 c2 c3 v2 c4 sw
 } else {
-  set theme radiance
+  set theme lightbrown
 }
 Set_Theme
 
@@ -87,41 +88,49 @@ apave::APave create pave
 set win .win
 pave makeWindow $win.fra "Find and Replace"
 pave paveWindow $win.fra {
+  {fra - - - - {-st nsew}}
+  {.nbk - - - - {pack -side top} {
+    f1 {-text " Test tab " -underline 2}
+    f2 {-text " Test tab 2 " -underline 2}
+  }}
+}
+pave paveWindow $win.fra.fra.nbk.f1 {
   {lab0 - - 1 1    {-st ens}  {-t "Theme: " -style TLabelFS}}
-  {Cbx0 lab0 L 1 7 {-st wesn} {-tvar ::theme -values {"azure light" "azure dark" "sun-valley light" "sun-valley dark" "forest light" "forest dark" radiance} -state readonly -selcombobox ::Set_Theme}}
-  {swi1 cbx0 L 1 1    {-st ens}  {-t "Lock" -var ::sw -com ::Lock -afteridle ::Lock}}
+  {Cbx0 + L 1 8 {-st wsn} {-tvar ::theme -values {"azure light" "azure dark" "sun-valley light" "sun-valley dark" "forest light" "forest dark" lightbrown darkbrown} -state readonly -selcombobox ::Set_Theme}}
+  {swi + L 1 1    {-st ens}  {-t "Enable" -var ::sw -com ::Lock -afteridle ::Lock}}
   {lab1 lab0 T 1 1    {-st ens}  {-t "Find: " -style TLabelFS}}
-  {Cbx1 lab1 L 1 9 {-st wesn} {-tvar ::en1 -values {"find 1" "find 2" "find 3"}}}
+  {Cbx1 + L 1 9 {-st wesn} {-tvar ::en1 -values {"find 1" "find 2" "find 3"}}}
   {lab2 lab1 T 1 1 {-st ens}  {-t "Replace: " -style TLabelFS}}
-  {cbx2 lab2 L 1 9 {-st wesn} {-tvar ::en2 -values {"replace 1" "replace 2" "replace 3"}}}
+  {cbx2 + L 1 9 {-st wesn} {-tvar ::en2 -values {"replace 1" "replace 2" "replace 3"}}}
   {labm lab2 T 1 1 {-st ens}  {-t "Match: "}}
-  {radA labm L 1 1 {-st es -padx 0}  {-t "Exact" -var ::v1 -value 1}}
-  {radB radA L 1 1 {-st ws -padx 5}  {-t "Glob" -var ::v1 -value 2}}
-  {radC radB L 1 5 {-st ws -padx 0 -cw 1}  {-t "RE  " -var ::v1 -value 3}}
+  {radA + L 1 1 {-st es -padx 0}  {-t "Exact" -var ::v1 -value 1}}
+  {radB + L 1 1 {-st ws -padx 5}  {-t "Glob" -var ::v1 -value 2}}
+  {radC + L 1 5 {-st ws -padx 0 -cw 1}  {-t "RE  " -var ::v1 -value 3}}
   {h_2 labm T 1 9  {-st es -rw 1}}
-  {seh0  h_2 T 1 9  {-st ews}}
-  {Chb1 seh0 T 1 2 {-st w} {-t "Match whole word only" -var ::c1}}
-  {chb2 chb1 T 1 2 {-st w} {-t "Match case"  -var ::c2}}
-  {chb3 chb2 T 1 2 {-st w} {-t "Replace by blank" -var ::c3}}
-  {h_4 chb3 T 1 1}
-  {seh1 h_4 T 1 11 {-st ews}}
+  {seh0 + T 1 10  {-st ews}}
+  {Chb1 + T 1 2 {-st w} {-t "Match whole word only" -var ::c1}}
+  {chb2 + T 1 2 {-st w} {-t "Match case"  -var ::c2}}
+  {chb3 + T 1 2 {-st w} {-t "Replace by blank" -var ::c3}}
+  {h_4 + T 1 1}
+  {seh1 + T 1 12 {-st ews}}
   {sev1 chb1 L 4 1}
-  {fralab3 sev1 L 4 6 {-st nsw -pady 0} {-borderwidth 0}}
+  {fralab3 + L 4 6 {-st nsw -pady 0} {-borderwidth 0}}
   {.lab3 - - - - {pack -anchor w} {-t "Direction:"}}
   {.Rad1 - - - - {pack -anchor w -padx 0} {-t "Up"   -var ::v2 -value 1}}
   {.rad2 - - - - {pack -anchor w -padx 0} {-t "Down" -var ::v2 -value 2}}
   {.chb4 - - - - {pack -anchor sw} {-t "Wrap around" -var ::c4}}
-  {sev2 swi1 L 10 1}
-  {But1 sev2 L 1 1 {-st wes -pady 2} {-t Find -tip {$::tip} -com "::pave res $win 1"}}
-  {But2 but1 T 1 1 {-st we  -pady 0} {-t "All in Text" -tip {$::tip} -com ":::pave res $win 2"}}
-  {But3 but2 T 1 1 {-st wen -pady 2} {-t "All in Session" -tip {$::tip} -com "::pave res $win 3"}}
-  {h_3 but3 T 2 1 {-st ews}}
-  {seh2 h_3 T 1 1 {-st ews}}
-  {but4 seh2 T 1 1 {-st wes -pady 4} {-t Replace -tip {$::tip} -com "::pave res $win 4"}}
-  {but5 but4 T 1 1 {-st we  -pady 0} {-t "All in Text" -tip {$::tip} -com "::pave res $win 5"}}
-  {But6 but5 T 1 1 {-st wen -pady 4} {-t "All in Session" -tip {$::tip} -com "::pave res $win 6"}}
+  {sev2 swi L 10 1}
+  {But1 + L 1 1 {-st wes -pady 2} {-t Find -tip {$::tip} -com "::pave res $win 1"}}
+  {But2 + T 1 1 {-st we  -pady 0} {-t "All in Text" -tip {$::tip} -com ":::pave res $win 2"}}
+  {But3 + T 1 1 {-st wen -pady 2} {-t "All in Session" -tip {$::tip} -com "::pave res $win 3"}}
+  {h_3 + T 2 1 {-st ews}}
+  {seh2 + T 1 1 {-st ews}}
+  {but4 + T 1 1 {-st wes -pady 4} {-t Replace -tip {$::tip} -com "::pave res $win 4"}}
+  {but5 + T 1 1 {-st we  -pady 0} {-t "All in Text" -tip {$::tip} -com "::pave res $win 5"}}
+  {But6 + T 1 1 {-st wen -pady 4} {-t "All in Session" -tip {$::tip} -com "::pave res $win 6"}}
   {lfr seh1 T 1 9 {-st nswe -pady 4} {-t "Labeled frame"}}
-  {.lab - - - - {-st nswe -pady 4} {-t "\nLabel inside the frame\n"}}
+  {.lab - - - - {-st ns} {-t "Spinbox inside the frame: "}}
+  {.spx + L 1 1 {-st ns -padx 4} {-from 0 -to 100 -w 7 -justify center}}
 }
 
 # ________________________ Transpops _________________________ #

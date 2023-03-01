@@ -1,6 +1,12 @@
 # LAST CHANGES:
 
 
+Version `24 Feb'23`
+
+  - CHANGE: lightbrown: scroll-vert-thumb.png
+  - CHANGE: lightbrown: scroll-hor-thumb.png
+
+
 Version `29 Jan'23`
 
   - CHANGE: darkbrown, lightbrown instead of radiance

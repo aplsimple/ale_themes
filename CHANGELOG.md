@@ -1,6 +1,11 @@
 # LAST CHANGES:
 
 
+Version `8 Mar'23`
+
+  - CHANGE: sizes of chb, rad, swi for *brown themes
+
+
 Version `24 Feb'23`
 
   - CHANGE: lightbrown: scroll-vert-thumb.png

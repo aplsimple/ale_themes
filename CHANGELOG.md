@@ -1,6 +1,11 @@
 # LAST CHANGES:
 
 
+Version `29 Nov'23`
+
+  - DELETE: package require Tk
+
+
 Version `8 Mar'23`
 
   - CHANGE: sizes of chb, rad, swi for *brown themes
